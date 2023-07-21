@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./script/script.js" defer></script>
+</head>
+<body>
+<div class="weather-card" id="weather_card">
+    <div class="city weather-element" id="city"></div>
+    <div class="main-info">
+        <div class="weather-info">
+            <img class="img" src="./img/free-icon-thermometer-3537764.png" alt="icon">
+            <div class="temperature" id="temperature">Temperature: </div>
+        </div>
+        <div class="weather-info">
+            <img class="img" src="./img/free-icon-wind-1146911.png" alt="icon">
+            <div class="wind" id="wind">Windspeed: </div>
+        </div>
+        <div class="weather-info">
+            <img class="img" src="./img/free-icon-partly-cloudy-5034667.png" alt="icon">
+            <div class="description" id="description">Sky condition: </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./script/raw.githubusercontent.com_micku7zu_vanilla-tilt.js_master_dist_vanilla-tilt.js"></script>
+<script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".weather-info"), {
+        max: 25,
+        speed: 200
+    });
+
+    //It also supports NodeList
+    VanillaTilt.init(document.querySelectorAll(".weather-info"));
+</script>
+
+</body>
+</html>
